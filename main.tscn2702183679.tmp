@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://b0edelq78t3rx"]
+
+[ext_resource type="Script" uid="uid://duqgwx6mlhwex" path="res://character_body_3d.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://byj018n6u7htn" path="res://doorhinge.gd" id="3_h2yge"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
+albedo_color = Color(0.31764707, 0.29803923, 0.27058825, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_color = Color(0.70980394, 0.6901961, 0.6431373, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_color = Color(0.38102233, 0.17670834, 0.014355382, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mycd"]
+albedo_color = Color(0.77669555, 0.10444365, 5.7756904e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_color = Color(0.7982079, 0.58961546, 1.347661e-06, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_riqys"]
+height = 3.6391602
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.78662366, 0.46943086, 0.1601727, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(1, 1, 0.21176471, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bhunq"]
+top_radius = 0.061035156
+bottom_radius = 0.061035156
+height = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhunq"]
+size = Vector3(1, 1.5, 0.001)
+
+[node name="Main" type="Node2D" unique_id=373479227]
+
+[node name="House" type="Node3D" parent="." unique_id=966869312]
+
+[node name="Floor" type="CSGBox3D" parent="House" unique_id=1920289969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+use_collision = true
+size = Vector3(24, 0.055, 15)
+
+[node name="Wall" type="CSGBox3D" parent="House" unique_id=644333170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4995003, 1.9724998, 0)
+use_collision = true
+size = Vector3(0.001, 4, 15)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall2" type="CSGBox3D" parent="House/Wall" unique_id=1174548778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+use_collision = true
+size = Vector3(0.001, 4, 15)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall3" type="CSGBox3D" parent="House/Wall" unique_id=1184895214]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 0, 7.5)
+use_collision = true
+size = Vector3(0.001, 4, 24)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall4" type="CSGBox3D" parent="House/Wall" unique_id=726113128]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 0, -7.5)
+use_collision = true
+size = Vector3(0.001, 4, 24)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall5" type="CSGBox3D" parent="House/Wall" unique_id=981351099]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22, 0, 0.49999937)
+use_collision = true
+size = Vector3(0.001, 4, 4)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall6" type="CSGBox3D" parent="House/Wall" unique_id=329868722]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.0005, 0, 5.2494993)
+use_collision = true
+size = Vector3(4.5, 4, 0.001)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall7" type="CSGBox3D" parent="House/Wall" unique_id=1187962257]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.0005, 0, 1.2494993)
+use_collision = true
+size = Vector3(1.5, 4, 0.001)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Wall8" type="CSGBox3D" parent="House/Wall" unique_id=1624899967]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.0005, 0.75, 2.4994993)
+use_collision = true
+size = Vector3(1, 2.5, 0.001)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="Floor2" type="CSGBox3D" parent="House" unique_id=1278264955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+use_collision = true
+size = Vector3(24, 0.055, 15)
+
+[node name="Bed" type="CSGBox3D" parent="House" unique_id=321964754]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.5005, 0.12249985, 6.5004997)
+use_collision = true
+size = Vector3(2, 0.5, 1)
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Blanket" type="CSGBox3D" parent="House/Bed" unique_id=319347339]
+transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0.00049972534, 0.09950015, -0.00049972534)
+use_collision = true
+size = Vector3(2, 0.5, 1)
+material = SubResource("StandardMaterial3D_7mycd")
+
+[node name="Blanket2" type="CSGBox3D" parent="House/Bed" unique_id=475455175]
+transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, -0.735, 0.35, 0)
+use_collision = true
+size = Vector3(0.4, 0.125, 0.675)
+material = SubResource("StandardMaterial3D_272bh")
+
+[node name="Nightstand" type="CSGBox3D" parent="House" unique_id=1154614353]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.3505, 0.12249985, 7.2504997)
+use_collision = true
+size = Vector3(0.5, 0.5, 0.5)
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Nightstand2" type="CSGBox3D" parent="House" unique_id=236609748]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.6505, 0.12249985, 7.2504997)
+use_collision = true
+size = Vector3(0.5, 0.5, 0.5)
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Lamp" type="CSGBox3D" parent="House" unique_id=425221768]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.3505, 0.5724999, 7.2504997)
+use_collision = true
+size = Vector3(0.1, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_5vw27")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House/Lamp" unique_id=2077942560]
+light_color = Color(1, 1, 0.57254905, 1)
+
+[node name="Lamp2" type="CSGBox3D" parent="House" unique_id=348809127]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.6505, 0.5724999, 7.2504997)
+use_collision = true
+size = Vector3(0.1, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_5vw27")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House/Lamp2" unique_id=740706954]
+light_color = Color(1, 1, 0.57254905, 1)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=2100480156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.299999, 0.6, 3.1000001)
+script = ExtResource("2_0xm2m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=898451578]
+transform = Transform3D(0.41, 0, 0, 0, 0.41, 0, 0, 0, 0.41, 0, 0.3360281, 0)
+shape = SubResource("CapsuleShape3D_riqys")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=1077498795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=571487932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.86637664, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/Head/Camera3D" unique_id=465260191]
+target_position = Vector3(0, 0, -3)
+
+[node name="Doorhinge" type="Node3D" parent="." unique_id=2125049804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1.5, 2)
+script = ExtResource("3_h2yge")
+
+[node name="Door" type="CSGBox3D" parent="Doorhinge" unique_id=1165234331]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0010004044, -0.77750015, 0.49949932)
+use_collision = true
+size = Vector3(1, 1.5, 0.001)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Doorhinge/Door" unique_id=902593577]
+transform = Transform3D(1.9106855e-15, 6.556708e-10, -0.99999994, 1, -6.556708e-10, 0, -4.371139e-08, -0.015, -4.3711385e-08, -0.33852196, -0.034867108, -0.0009994507)
+material_override = SubResource("StandardMaterial3D_h2yge")
+mesh = SubResource("CylinderMesh_bhunq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Doorhinge/Door/MeshInstance3D" unique_id=1975594642]
+transform = Transform3D(1.9106853e-15, 1, -4.3711385e-08, 2.9140924e-06, -2.9140926e-06, -66.666664, -1, 0, -4.371139e-08, 0.08486718, -0.09991455, -0.33852196)
+shape = SubResource("BoxShape3D_bhunq")
